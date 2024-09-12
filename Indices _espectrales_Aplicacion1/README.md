@@ -74,5 +74,5 @@ Esta línea al final del código ejecutará la aplicación Shiny.
 
 ## Créditos
 
-Desarrollado por [Nombre del desarrollador], basado en imágenes de Landsat 8.
+Desarrollado por AndersonDHL, basado en imágenes de Landsat 8.
 
