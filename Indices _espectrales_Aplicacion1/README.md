@@ -3,6 +3,12 @@
 
 Esta aplicación en `R` utilizando `Shiny` permite visualizar diferentes índices espectrales a partir de imágenes multiespectrales de Landsat 8. El código está diseñado para cargar una imagen multiespectral de Landsat 8, calcular varios índices espectrales, y luego mostrar estos índices a través de gráficos y un histograma.
 
+## Ejemplo de la Aplicación
+
+![Ejemplo de visualización](image.png)
+
+La imagen de ejemplo muestra la interfaz de la aplicación en la que se está visualizando el Índice de Vegetación Proporcionada (NDVI).
+
 ## Requisitos previos
 
 - Necesitas una imagen multiespectral de Landsat 8 en formato `.tif` que contenga todas las bandas necesarias para calcular los índices.
@@ -69,3 +75,4 @@ Esta línea al final del código ejecutará la aplicación Shiny.
 ## Créditos
 
 Desarrollado por [Nombre del desarrollador], basado en imágenes de Landsat 8.
+
