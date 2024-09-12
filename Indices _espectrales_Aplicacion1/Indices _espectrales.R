@@ -15,7 +15,7 @@ library(shiny)
 library(shinythemes)
 
 # Carga la imagen de Landsat 8
-ruta_imagen <- "E:/EA_GIS/BootCamp_IA/Dia1/L8.tif"
+ruta_imagen <- "................../L8.tif"
 landsat8 <- rast(ruta_imagen)
 
 # Definir los índices espectrales con siglas, nombres completos y descripciones mejoradas
