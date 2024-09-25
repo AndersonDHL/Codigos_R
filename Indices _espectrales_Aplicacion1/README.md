@@ -1,6 +1,6 @@
 # Visualización de Índices Espectrales - Aplicación Shiny
 
-Esta aplicación en `R` utilizando `Shiny` permite visualizar diferentes índices espectrales y composiciones RGB a partir de imágenes multiespectrales de Landsat 8. El código está diseñado para cargar una imagen multiespectral de Landsat 8, calcular varios índices espectrales, y mostrar estas composiciones a través de gráficos, histogramas y la posibilidad de descargar los resultados.
+Esta aplicación en `R` utilizando `Shiny` permite visualizar diferentes índices espectrales y composiciones RGB a partir de imágenes multiespectrales de Landsat 8. El código está diseñado para cargar una imagen multiespectral de Landsat 8, calcular varios índices espectrales y mostrar estas composiciones a través de gráficos, histogramas y la posibilidad de descargar los resultados.
 
 ## Ejemplo de la Aplicación
 
@@ -11,6 +11,7 @@ La imagen de ejemplo muestra la interfaz de la aplicación donde se visualizan l
 ## Requisitos previos
 
 - Necesitas una imagen multiespectral de Landsat 8 en formato `.tif` que contenga todas las bandas necesarias para calcular los índices.
+- **Las imágenes deben tener aplicadas correcciones atmosféricas, radiométricas y geométricas previamente.**
 - La imagen debe ser cargada a través de la interfaz de la aplicación y no requiere una ruta específica en el código.
 
 ## ¿Qué es una imagen multiespectral de Landsat 8?
@@ -39,18 +40,23 @@ La aplicación permite visualizar varias composiciones RGB para resaltar diferen
 - **Geología (Banda 7, Banda 4, Banda 2):** Útil para análisis geológicos y detección de suelos.
 - **Agricultura (Banda 6, Banda 5, Banda 2):** Destaca áreas agrícolas para estudios de cultivos.
 - **Nieve Nube (Banda 2, Banda 6, Banda 7):** Diferencia nieve y nubes, útil en zonas montañosas.
+- 
 
 ## Índices calculados
 
 La aplicación calcula varios índices espectrales, cada uno con un propósito específico y permite visualizar su fórmula:
 
-- **NDVI (Índice de Vegetación Normalizado):** Mide la densidad de vegetación verde.  
-- **DVI (Índice de Vegetación Diferencial):** Mide la diferencia entre la vegetación infrarroja y roja.  
-- **EVI (Índice de Vegetación Mejorada):** Mejora el NDVI al reducir efectos atmosféricos.  
-- **SAVI (Índice de Vegetación Ajustado al Suelo):** Corrige el efecto del suelo desnudo en áreas con poca vegetación.  
-- **NDWI (Índice Diferencial de Agua Normalizada):** Detecta cuerpos de agua en áreas húmedas.  
-- **NDSI (Índice Diferencial Normalizado de Nieve):** Detecta nieve en áreas nevadas.  
-- **NBR (Índice Normalizado de Área Quemada):** Detecta áreas afectadas por incendios.  
+- **NDVI (Índice de Vegetación Normalizado):** Mide la densidad de vegetación verde.
+- **DVI (Índice de Vegetación Diferencial):** Mide la diferencia entre la vegetación infrarroja y roja.
+- **NDWI (Índice Diferencial de Agua Normalizada):** Detecta cuerpos de agua en áreas húmedas.
+- **EVI (Índice de Vegetación Mejorada):** Mejora el NDVI al reducir efectos atmosféricos.
+- **TVI (Índice de Vegetación Transformado):** Resalta el contraste de la vegetación.
+- **ARVI (Índice de Vegetación Atmosféricamente Resistente):** Resistente a los efectos atmosféricos.
+- **SAVI (Índice de Vegetación Ajustado al Suelo):** Corrige el efecto del suelo desnudo en áreas con poca vegetación.
+- **LAI (Índice de Área Foliar):** Mide la cantidad de área foliar verde.
+- **BSI (Índice de Suelo Desnudo):** Identifica áreas de suelo desnudo.
+- **NDSI (Índice Diferencial Normalizado de Nieve):** Detecta nieve en áreas nevadas.
+- **NBR (Índice Normalizado de Área Quemada):** Detecta áreas afectadas por incendios.
 
 ## Cómo usar la aplicación
 
@@ -59,7 +65,7 @@ La aplicación calcula varios índices espectrales, cada uno con un propósito e
 3. Selecciona la composición RGB o el índice espectral de interés.
 4. Ajusta los valores mínimos y máximos utilizando los deslizadores para aplicar una máscara a los valores que te interesen.
 5. Visualiza el índice y su histograma en tiempo real.
-6. Descarga la imagen corregida o los índices ajustados según tus necesidades.
+6. Descarga los índices ajustados según tus necesidades.
 
 ```r
 shinyApp(ui = ui, server = server)
