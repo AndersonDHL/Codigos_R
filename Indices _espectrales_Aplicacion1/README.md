@@ -4,8 +4,7 @@ Esta aplicación en `R` utilizando `Shiny` permite visualizar diferentes índice
 
 ## Ejemplo de la Aplicación
 
-
-![Ejemplo de visualización](image.png)
+![Ejemplo de visualización](imagen.png)
 
 La imagen de ejemplo muestra la interfaz de la aplicación donde se visualizan las composiciones RGB y los índices espectrales ajustados, junto con sus histogramas.
 
